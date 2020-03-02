@@ -1,44 +1,47 @@
-const Main = require('@architect/views/main.js')
-const staticAssetsHelper = require('./static-assets-helper')
+const Main = require("@architect/views/main.js");
+const staticAssetsHelper = require("./static-assets-helper");
 
 // Customize your site by changing the data below
-exports.handler = async function Index () {
+exports.handler = async function Index() {
   let body = Main({
     /**
      * Basic bio
      */
-    fullname: 'Your Name', // ←  Start by adding your name!
-    title: 'My personal site!',
-    occupation: 'Artist & Photographer',
-    location: 'West Glacier, MT',
-    bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.',
+    fullname: "Pieter Venter",
+    title: "My Bio",
+    occupation: "Software Engineer & Architect",
+    location: "Working remotely",
+    locationHref: "https://www.glassdoor.com/blog/digital-nomad-invision/",
+    bio: `I am a software engineer, partner, and entrepreneur at Invisible Technologies, currently living in Chengdu China, but will be hopping to my next destination soon as a digital nomad. My interests range from eSports to business. I am also interested in cutting edge, technology, and innovation.
+
+You can click the button above to hire me. If you’d like to get in touch, feel free to say hello through any of the social links below.`,
 
     /**
      * Contact / social
      * - Comment out any item below to remove it from your page
      */
-    email: 'your@email.com',
-    twitter: 'yourTwitter',
-    linkedin: 'your-linkedin-name',
-    instagram: 'yourInsta',
-    facebook: 'your-facebook-name',
+    email: "pieter@venter.pro",
+    twitter: "VentusCyrus",
+    linkedin: "pventer1",
+    instagram: "pventer1",
+    stackoverflow: "pieter-venter",
+    angelList: "pieter-venter-8",
+    medium: "pieter_venter",
+    github: "cyrus-za",
+    facebook: "pventer1",
 
     /**
      * Layout
      */
-    photographer: 'Ivana Cajina',
-    service: 'Unsplash',
-    credit: 'https://unsplash.com/@von_co',
-    image: staticAssetsHelper('background.jpg')
-    // or link to an external image URL such as ↓
-    // image: 'https://images.unsplash.com/photo-1506535772317-9fdb71c959c6'
-  })
+    image: staticAssetsHelper("background.jpg")
+  });
 
   return {
     headers: {
-      'content-type': 'text/html; charset=utf8',
-      'cache-control': 'no-cache, no-store, must-revalidate, max-age=0, s-maxage=0'
+      "content-type": "text/html; charset=utf8",
+      "cache-control":
+        "no-cache, no-store, must-revalidate, max-age=0, s-maxage=0"
     },
     body
-  }
-}
+  };
+};

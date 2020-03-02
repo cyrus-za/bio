@@ -1,9 +1,9 @@
-const PhotoCredit = require('./photo-credit.js')
-module.exports = function Aside (props) {
-  props = props || {}
-  let photographer = props.photographer || ''
-  let service = props.service || ''
-  let credit = props.credit || ''
+const PhotoCredit = require("./photo-credit.js");
+module.exports = function Aside(props) {
+  props = props || {};
+  let photographer = props.photographer || "";
+  let service = props.service || "";
+  let credit = props.credit || "";
 
   return `
 <aside
@@ -17,11 +17,6 @@ module.exports = function Aside (props) {
     flex-grow-1-large
   "
 >
-  ${PhotoCredit({
-    photographer,
-    service,
-    credit
-  })}
 </aside>
-  `
-}
+  `;
+};

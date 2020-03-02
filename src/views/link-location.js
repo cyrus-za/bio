@@ -1,6 +1,8 @@
-const Icon = require('./icon')
-module.exports = function LocationLink (props) {
-  let location = props.location || ''
+const Icon = require("./icon");
+module.exports = function LocationLink(props) {
+  let location = props.location || "";
+
+  const href = props.href || `https://www.google.com/maps/place/${location}`;
   return location
     ? `
 <a
@@ -21,17 +23,17 @@ module.exports = function LocationLink (props) {
     fill-979797
     fill-hover-058AEA
   "
-  href="https://www.google.com/maps/place/${location}"
+  href="${href}"
   target="_blank"
   rel="noopener"
 >
   ${Icon({
-    class: 'margin-right-8 fill-inherit',
-    style: 'width:0.4375rem;height:0.625rem;',
-    href: 'location-marker'
+    class: "margin-right-8 fill-inherit",
+    style: "width:0.4375rem;height:0.625rem;",
+    href: "location-marker"
   })}
   ${location}
 </a>
   `
-  : ''
-}
+    : "";
+};

@@ -1,8 +1,8 @@
-module.exports = function PhotoCredit (props) {
-  props = props || {}
-  let photographer = props.photographer || ''
-  let service = props.service || ''
-  let credit = props.credit || ''
+module.exports = function PhotoCredit(props) {
+  props = props || {};
+  let photographer = props.photographer || "";
+  let service = props.service || "";
+  let credit = props.credit || "";
 
   return `
 <a
@@ -26,7 +26,6 @@ module.exports = function PhotoCredit (props) {
   target="_blank"
   rel="noopener"
 >
-  Photo by <span class="color-2DA6FF">${photographer}</span> on <span class="color-2DA6FF">${service}</span>
 </a>
-  `
-}
+  `;
+};

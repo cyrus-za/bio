@@ -1,11 +1,11 @@
-const Styles = require('./styles')
-const Symbols = require('./symbols')
-const Splash = require('./splash')
-const Content = require('./content')
-module.exports = function Home (props) {
-  props = props || {}
-  let title = props.title || 'Personal Website'
-  return `
+const Styles = require("./styles");
+const Symbols = require("./symbols");
+const Splash = require("./splash");
+const Content = require("./content");
+module.exports = function Home(props) {
+  props = props || {};
+  let title = props.title || "Pieter Venter";
+  return /*html*/ `
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,5 +31,5 @@ module.exports = function Home (props) {
  ${Content(props)}
 </body>
 </html>
-  `
-}
+  `;
+};
