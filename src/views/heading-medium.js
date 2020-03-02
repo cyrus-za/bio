@@ -1,4 +1,4 @@
-module.exports = function MediumHeading (props) {
+module.exports = function MediumHeading(props) {
   props = props || {}
   let children = props.children || ''
   return `

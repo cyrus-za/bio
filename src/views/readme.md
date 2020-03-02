@@ -10,18 +10,15 @@ For example, here's how you'd require `src/views/layout.js`:
 var layout = require('@architect/views/layout')
 ```
 
-
 ## How is this different from `src/shared`?
 
 When we looked at how people were using `src/shared`, we saw that people realized it was an easy way to share frontend components. Which is true! But we felt we could make it more explicit while also not bloating every function when the workflow desired was specifically for `@http` `GET`s.
-
 
 ## Use caution!
 
 Everything in `src/views` will be copied into all of your project's `@http` `GET` HTTP functions, which has the potential to bloat your application.
 
 Remember: you want to keep your functions sub-5MB for optimal performance.
-
 
 ## Note
 

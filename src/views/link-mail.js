@@ -1,7 +1,7 @@
-const Icon = require("./icon");
+const Icon = require('./icon')
 module.exports = function MailLink(props) {
-  props = props || {};
-  let email = props.email || "";
+  props = props || {}
+  let email = props.email || ''
   return email
     ? `
 <a
@@ -26,12 +26,12 @@ module.exports = function MailLink(props) {
   href="mailto:${email}?subject=Hi%20there!"
 >
   ${Icon({
-    class: "margin-right-12 fill-FFFFFF",
-    style: "width:1.125rem;height:1rem;",
-    href: "chat-bubble"
+    class: 'margin-right-12 fill-FFFFFF',
+    style: 'width:1.125rem;height:1rem;',
+    href: 'chat-bubble',
   })}
   Drop me an email
 </a>
   `
-    : "";
-};
+    : ''
+}

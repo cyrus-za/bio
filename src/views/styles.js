@@ -1,4 +1,4 @@
-module.exports = function Styles (props) {
+module.exports = function Styles(props) {
   props = props || {}
   let image = props.image || ''
 

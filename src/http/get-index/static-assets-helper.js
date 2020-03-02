@@ -1,4 +1,4 @@
-module.exports = function StaticAssetsHelper (image) {
+module.exports = function StaticAssetsHelper(image) {
   // This helper demonstrates how to use your Begin CDN
   //  as well as local development and staging previews of static assets
   return process.env.NODE_ENV === 'production'

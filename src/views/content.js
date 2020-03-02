@@ -1,24 +1,30 @@
-const LargeHeading = require("./heading-large");
-const MediumHeading = require("./heading-medium");
-const LocationLink = require("./link-location");
-const MailLink = require("./link-mail");
-const SocialMedia = require("./social-media");
-const Footer = require("./footer");
+const LargeHeading = require('./heading-large')
+const MediumHeading = require('./heading-medium')
+const LocationLink = require('./link-location')
+const MailLink = require('./link-mail')
+const SocialMedia = require('./social-media')
+const Footer = require('./footer')
 
 module.exports = function Content(props) {
-  props = props || {};
-  let fullname = props.fullname || "";
-  let occupation = props.occupation || "";
-  let locationHref = props.locationHref || "";
-  let location = props.location || "";
-  let bio = props.bio || "";
-  let email = props.email || "";
-  let twitter = props.twitter || "";
-  let linkedin = props.linkedin || "";
-  let instagram = props.instagram || "";
-  let facebook = props.facebook || "";
+  let = {
+    fullname,
+    occupation,
+    locationHref,
+    location,
+    bio,
+    email,
+    github,
+    medium,
+    angelList,
+    stackoverflow,
+    pocket,
+    twitter,
+    linkedin,
+    instagram,
+    facebook,
+  } = props || {}
 
-  let footer = Footer();
+  let footer = Footer()
   return /*html*/ `
 <section
   class="
@@ -50,14 +56,14 @@ module.exports = function Content(props) {
       "
     >
       ${LargeHeading({
-        children: fullname
+        children: fullname,
       })}
       ${MediumHeading({
-        children: occupation
+        children: occupation,
       })}
       ${LocationLink({
         location,
-        href: locationHref
+        href: locationHref,
       })}
       <p
         class="
@@ -78,18 +84,23 @@ module.exports = function Content(props) {
         "
       >
         ${MailLink({
-          email
+          email,
         })}
         ${SocialMedia({
+          github,
+          medium,
+          angelList,
+          stackoverflow,
+          pocket,
           twitter,
           linkedin,
           instagram,
-          facebook
+          facebook,
         })}
       </div>
     </div>
   </div>
   ${footer}
 </section>
-  `;
-};
+  `
+}

@@ -1,8 +1,8 @@
 module.exports = function PhotoCredit(props) {
-  props = props || {};
-  let photographer = props.photographer || "";
-  let service = props.service || "";
-  let credit = props.credit || "";
+  props = props || {}
+  let photographer = props.photographer || ''
+  let service = props.service || ''
+  let credit = props.credit || ''
 
   return `
 <a
@@ -27,5 +27,5 @@ module.exports = function PhotoCredit(props) {
   rel="noopener"
 >
 </a>
-  `;
-};
+  `
+}

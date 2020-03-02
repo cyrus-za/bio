@@ -1,4 +1,4 @@
-module.exports = function LargeHeading (props) {
+module.exports = function LargeHeading(props) {
   props = props || {}
   let children = props.children || ''
   return `

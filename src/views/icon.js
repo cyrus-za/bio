@@ -1,4 +1,4 @@
-module.exports = function Icon (props) {
+module.exports = function Icon(props) {
   props = props || {}
   return `
 <svg
