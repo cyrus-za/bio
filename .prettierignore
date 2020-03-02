@@ -1,0 +1,16 @@
+node_modules
+env.*
+yarn.lock
+dist
+*.log
+public/favicon
+images
+*.rb
+.cache
+*.sass
+*.ttf
+*.sh
+.coverage
+src/generated
+.history
+.next/
